@@ -22,8 +22,8 @@
             {% for producto in productos %}
             <tr>
                 <td>{{ producto['id'] }}</td>
-                <td>{{ producto['nombre'] }}</td>
-                <td>{{ producto['precio_venta'] }}</td>
+                <td><a href="/producto/{{ producto['id'] }}">{{ producto['nombre'] }}</a></td>
+                <td>${{ '{:.2f}'.format(producto['precio_venta']) }}</td>
                 <td>{{ producto['cantidad'] }}</td>
             </tr>
             {% endfor %}
